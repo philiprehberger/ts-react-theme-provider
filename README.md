@@ -1,11 +1,11 @@
-# @philiprehberger/ts-react-theme-provider
+# @philiprehberger/react-theme-provider
 
 Dark/light/system theme provider for React with localStorage persistence and system preference detection.
 
 ## Installation
 
 ```bash
-npm install @philiprehberger/ts-react-theme-provider
+npm install @philiprehberger/react-theme-provider
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @philiprehberger/ts-react-theme-provider
 Wrap your app with the provider:
 
 ```tsx
-import { ThemeProvider } from '@philiprehberger/ts-react-theme-provider';
+import { ThemeProvider } from '@philiprehberger/react-theme-provider';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
 Access theme state from any component:
 
 ```tsx
-import { useTheme } from '@philiprehberger/ts-react-theme-provider';
+import { useTheme } from '@philiprehberger/react-theme-provider';
 
 function MyComponent() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -45,7 +45,7 @@ function MyComponent() {
 Pre-built toggle component with sun/moon/system icons:
 
 ```tsx
-import { ThemeToggle } from '@philiprehberger/ts-react-theme-provider';
+import { ThemeToggle } from '@philiprehberger/react-theme-provider';
 
 <ThemeToggle />
 ```
