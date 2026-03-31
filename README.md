@@ -1,9 +1,8 @@
 # @philiprehberger/react-theme-provider
 
-[![CI](https://github.com/philiprehberger/ts-react-theme-provider/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-react-theme-provider/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/react-theme-provider/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/react-theme-provider/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/react-theme-provider.svg)](https://www.npmjs.com/package/@philiprehberger/react-theme-provider)
-[![License](https://img.shields.io/github/license/philiprehberger/ts-react-theme-provider)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/react-theme-provider)](https://github.com/philiprehberger/react-theme-provider/commits/main)
 
 Dark/light/system theme provider for React with localStorage persistence and system preference detection
 
@@ -75,7 +74,6 @@ import { ThemeToggle } from '@philiprehberger/react-theme-provider';
 - Listens for system `prefers-color-scheme` changes when set to `system`
 - Works with Tailwind CSS `dark:` variant out of the box
 
-
 ## Development
 
 ```bash
@@ -84,6 +82,24 @@ npm run build
 npm test
 ```
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/react-theme-provider)
+
+🐛 [Report issues](https://github.com/philiprehberger/react-theme-provider/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/react-theme-provider/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
+[MIT](LICENSE)
