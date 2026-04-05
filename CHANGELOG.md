@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8
+
+- Fix README GitHub URLs to use correct repo name (ts-react-theme-provider)
+
 ## 0.1.7
 
 - Standardize README to 3-badge format with emoji Support section

@@ -1,8 +1,8 @@
 # @philiprehberger/react-theme-provider
 
-[![CI](https://github.com/philiprehberger/react-theme-provider/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/react-theme-provider/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/ts-react-theme-provider/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-react-theme-provider/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/react-theme-provider.svg)](https://www.npmjs.com/package/@philiprehberger/react-theme-provider)
-[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/react-theme-provider)](https://github.com/philiprehberger/react-theme-provider/commits/main)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/ts-react-theme-provider)](https://github.com/philiprehberger/ts-react-theme-provider/commits/main)
 
 Dark/light/system theme provider for React with localStorage persistence and system preference detection
 
@@ -86,11 +86,11 @@ npm test
 
 If you find this project useful:
 
-⭐ [Star the repo](https://github.com/philiprehberger/react-theme-provider)
+⭐ [Star the repo](https://github.com/philiprehberger/ts-react-theme-provider)
 
-🐛 [Report issues](https://github.com/philiprehberger/react-theme-provider/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+🐛 [Report issues](https://github.com/philiprehberger/ts-react-theme-provider/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 
-💡 [Suggest features](https://github.com/philiprehberger/react-theme-provider/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+💡 [Suggest features](https://github.com/philiprehberger/ts-react-theme-provider/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
 
 ❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
 

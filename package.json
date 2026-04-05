@@ -1,6 +1,6 @@
 {
   "name": "@philiprehberger/react-theme-provider",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Dark/light/system theme provider for React with localStorage persistence and system preference detection",
   "type": "module",
   "main": "./dist/index.cjs",
