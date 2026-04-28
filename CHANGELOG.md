@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+- Add `disableTransitionOnChange` prop to suppress CSS transitions during theme swap (avoids color flicker)
+- Add `useResolvedTheme()` shorthand hook returning just `'light' | 'dark'`
+
 ## 0.1.8
 
 - Fix README GitHub URLs to use correct repo name (ts-react-theme-provider)

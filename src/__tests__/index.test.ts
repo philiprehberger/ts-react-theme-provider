@@ -20,4 +20,10 @@ describe('react-theme-provider exports', () => {
     const mod = await import('../../dist/index.js');
     assert.equal(mod.useTheme.name, 'useTheme');
   });
+
+  it('exports useResolvedTheme', async () => {
+    const mod = await import('../../dist/index.js');
+    assert.equal(typeof mod.useResolvedTheme, 'function');
+    assert.equal(mod.useResolvedTheme.name, 'useResolvedTheme');
+  });
 });

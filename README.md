@@ -44,6 +44,29 @@ function MyComponent() {
 }
 ```
 
+### useResolvedTheme
+
+Shorthand when you only need the resolved value:
+
+```tsx
+import { useResolvedTheme } from '@philiprehberger/react-theme-provider';
+
+function Logo() {
+  const theme = useResolvedTheme(); // 'light' | 'dark'
+  return <img src={theme === 'dark' ? '/logo-dark.svg' : '/logo-light.svg'} />;
+}
+```
+
+### Disable Transition Flicker
+
+```tsx
+<ThemeProvider disableTransitionOnChange>
+  <YourApp />
+</ThemeProvider>
+```
+
+Suppresses CSS transitions for one frame while the new theme class is applied — useful if your app uses long color transitions that would otherwise flicker on switch.
+
 ### ThemeToggle
 
 Pre-built toggle component with sun/moon/system icons:
@@ -60,11 +83,12 @@ import { ThemeToggle } from '@philiprehberger/react-theme-provider';
 |--------|------|-------------|
 | `ThemeProvider` | Component | Context provider with localStorage persistence and system preference detection |
 | `useTheme()` | Hook | Returns `{ theme, setTheme, resolvedTheme }` for reading/setting theme |
+| `useResolvedTheme()` | Hook | Returns just the resolved theme: `'light' \| 'dark'` |
 | `ThemeToggle` | Component | Pre-built three-way toggle (light/dark/system) with sun/moon/system icons |
 | `Theme` | Type | `'light' \| 'dark' \| 'system'` |
 | `ResolvedTheme` | Type | `'light' \| 'dark'` (the actual applied theme) |
 | `ThemeContextType` | Type | Shape of the theme context value |
-| `ThemeProviderProps` | Type | Props for `ThemeProvider` (`children`, `storageKey?`, `defaultTheme?`) |
+| `ThemeProviderProps` | Type | Props for `ThemeProvider` (`children`, `storageKey?`, `defaultTheme?`, `disableTransitionOnChange?`) |
 | `ThemeToggleProps` | Type | Props for `ThemeToggle` (`className?`, `activeClassName?`, `inactiveClassName?`) |
 
 ## How It Works

@@ -1,6 +1,7 @@
 export {
   ThemeProvider,
   useTheme,
+  useResolvedTheme,
   type Theme,
   type ResolvedTheme,
   type ThemeContextType,

@@ -17,6 +17,28 @@ export interface ThemeProviderProps {
   storageKey?: string;
   /** Default theme when no stored preference exists (default: "system") */
   defaultTheme?: Theme;
+  /**
+   * When true, suppresses CSS transitions for one frame during theme change to
+   * avoid color-flicker on slow paint paths. Default: false.
+   */
+  disableTransitionOnChange?: boolean;
+}
+
+function suppressTransitions(): void {
+  const css = document.createElement('style');
+  css.appendChild(
+    document.createTextNode(
+      `*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}`,
+    ),
+  );
+  document.head.appendChild(css);
+  // Force reflow then remove on next frame
+  void window.getComputedStyle(document.body).opacity;
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.head.removeChild(css);
+    });
+  });
 }
 
 /**
@@ -28,6 +50,7 @@ export function ThemeProvider({
   children,
   storageKey = 'theme',
   defaultTheme = 'system',
+  disableTransitionOnChange = false,
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
   const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>('light');
@@ -54,11 +77,15 @@ export function ThemeProvider({
       resolved = theme;
     }
 
+    if (disableTransitionOnChange) {
+      suppressTransitions();
+    }
+
     setResolvedTheme(resolved);
     root.classList.remove('light', 'dark');
     root.classList.add(resolved);
     localStorage.setItem(storageKey, theme);
-  }, [theme, mounted, storageKey]);
+  }, [theme, mounted, storageKey, disableTransitionOnChange]);
 
   useEffect(() => {
     if (!mounted || theme !== 'system') return;
@@ -91,4 +118,11 @@ export function useTheme(): ThemeContextType {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
+}
+
+/**
+ * Shorthand hook returning just the resolved theme ('light' or 'dark').
+ */
+export function useResolvedTheme(): ResolvedTheme {
+  return useTheme().resolvedTheme;
 }
